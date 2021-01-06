@@ -39,3 +39,7 @@ export const ContentHeader = styled.header`
     border-radius: 50% 50%;
   }
 `
+
+export const ContentCard = styled.div`
+  width: 100vw;
+`

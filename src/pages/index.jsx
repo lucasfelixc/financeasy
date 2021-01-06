@@ -3,7 +3,18 @@ import Head from 'next/head'
 
 import Perfil from '../assets/images/lucas.svg'
 
-import { Container, ContentHeader } from '../styles/pages/Home/styles'
+import {
+  Container,
+  ContentHeader,
+  ContentCard
+} from '../styles/pages/Home/styles'
+
+const cards = [
+  {
+    number: '4465 1122 3562 8751',
+    type: 'Mastercard'
+  }
+]
 
 export default function Home() {
   const name = 'Lucas Felix'
@@ -30,6 +41,8 @@ export default function Home() {
           <Perfil />
         </div>
       </ContentHeader>
+
+      <ContentCard></ContentCard>
 
       <main></main>
     </Container>
