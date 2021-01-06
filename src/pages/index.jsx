@@ -1,18 +1,28 @@
 import React from 'react'
 import Head from 'next/head'
 
+import mastercard from '../assets/icons/mastercard.svg'
 import Perfil from '../assets/images/lucas.svg'
 
 import {
   Container,
   ContentHeader,
-  ContentCard
+  ContentCard,
+  InfoCard
 } from '../styles/pages/Home/styles'
 
 const cards = [
   {
+    name: 'Nubank',
     number: '4465 1122 3562 8751',
-    type: 'Mastercard'
+    type: 'Mastercard',
+    background: '#8A05BE'
+  },
+  {
+    name: 'Inter',
+    number: '4465 1122 3562 6524',
+    type: 'Mastercard',
+    background: '#FF7A00'
   }
 ]
 
@@ -42,7 +52,21 @@ export default function Home() {
         </div>
       </ContentHeader>
 
-      <ContentCard></ContentCard>
+      <ContentCard>
+        {cards.map((value, index) => {
+          return (
+            <InfoCard key={index} background={value.background}>
+              <div className="infos">
+                <strong>{value.name}</strong>
+                <span>{value.number}</span>
+              </div>
+              <div className="logoCard">
+                <img src={mastercard} alt="" />
+              </div>
+            </InfoCard>
+          )
+        })}
+      </ContentCard>
 
       <main></main>
     </Container>

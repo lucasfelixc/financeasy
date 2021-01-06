@@ -41,5 +41,27 @@ export const ContentHeader = styled.header`
 `
 
 export const ContentCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   width: 100vw;
+`
+
+export const InfoCard = styled.div`
+  width: 80%;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding: 15px;
+  border-radius: 20px;
+
+  background: ${props => props.background};
+
+  .infos {
+    display: flex;
+    flex-direction: column;
+  }
 `
