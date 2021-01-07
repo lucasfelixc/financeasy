@@ -1,8 +1,7 @@
-import React from 'react'
 import Head from 'next/head'
 
-import mastercard from '../assets/icons/mastercard.svg'
 import Perfil from '../assets/images/lucas.svg'
+import Mastercard from '../assets/icons/mastercard.svg'
 
 import {
   Container,
@@ -60,9 +59,7 @@ export default function Home() {
                 <strong>{value.name}</strong>
                 <span>{value.number}</span>
               </div>
-              <div className="logoCard">
-                <img src={mastercard} alt="" />
-              </div>
+              <Mastercard />
             </InfoCard>
           )
         })}

@@ -47,6 +47,8 @@ export const ContentCard = styled.div`
   align-items: center;
 
   width: 100vw;
+
+  margin: 30px 0;
 `
 
 export const InfoCard = styled.div`
@@ -57,6 +59,7 @@ export const InfoCard = styled.div`
 
   padding: 15px;
   border-radius: 20px;
+  margin: 0 0 15px 0;
 
   background: ${props => props.background};
 
