@@ -4,6 +4,7 @@ import Perfil from '../assets/images/lucas.svg'
 import Mastercard from '../assets/icons/mastercard.svg'
 import Arrowdown from '../assets/icons/arrowdown.svg'
 import Salary from '../assets/icons/salary.svg'
+import Historic from '../assets/icons/historic.svg'
 
 import {
   Container,
@@ -132,6 +133,12 @@ export default function Home() {
               )
             })}
           </InfoPay>
+        </div>
+        <div className="contentHistoric">
+          <button className="accessHistoric">
+            <Historic />
+            Histórico de gastos
+          </button>
         </div>
       </main>
     </Container>

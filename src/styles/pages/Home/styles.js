@@ -31,7 +31,7 @@ export const Container = styled.div`
 
     .recipe {
       width: 100%;
-      height: 50%;
+      height: 60%;
 
       .tittle {
         display: flex;
@@ -54,6 +54,36 @@ export const Container = styled.div`
           background: ${props => props.theme.colors.primary};
 
           border-radius: 15px;
+        }
+      }
+    }
+
+    .contentHistoric {
+      padding: 20px 0 0 20px;
+
+      .accessHistoric {
+        width: 50%;
+        height: 40px;
+
+        display: flex;
+        align-items: center;
+
+        background: ${props => props.theme.colors.primary};
+
+        border-radius: 15px;
+
+        font-size: 15px;
+        font-weight: 600;
+        color: #ffffff;
+
+        transition: 0.3s;
+
+        :hover {
+          background: #372397;
+        }
+
+        svg {
+          margin: 0 20px;
         }
       }
     }
@@ -144,7 +174,7 @@ export const InfoCard = styled.div`
 
 export const InfoPay = styled.ul`
   width: 95%;
-  height: 90%;
+  height: 70%;
 
   display: grid;
   grid-template-columns: 33% 33% 33%;

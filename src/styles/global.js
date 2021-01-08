@@ -16,4 +16,12 @@ export default createGlobalStyle`
   li {
     list-style: none;
   }
+
+  button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    font-family: 'Poppins', sans-serif;
+  }
 `
