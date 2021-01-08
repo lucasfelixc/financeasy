@@ -3,20 +3,76 @@ import styled from 'styled-components'
 export const Container = styled.div`
   width: 100vw;
   height: 100vh;
+
+  main {
+    width: 100%;
+    height: 60%;
+    background: ${props => props.theme.colors.backgroundSecondary};
+
+    border-radius: 0 70px 0 0;
+
+    .balance {
+      height: 20%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      padding-left: 20px;
+
+      span {
+        font-size: 14px;
+      }
+
+      strong {
+        font-size: 22px;
+      }
+    }
+
+    .recipe {
+      width: 100%;
+      height: 50%;
+
+      .tittle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+          font-size: 14px;
+          font-weight: 600;
+
+          padding-left: 20px;
+        }
+
+        .rate {
+          font-size: 14px;
+
+          padding: 5px 15px;
+          margin-right: 20px;
+
+          background: ${props => props.theme.colors.primary};
+
+          border-radius: 15px;
+        }
+      }
+    }
+  }
 `
 
 export const ContentHeader = styled.header`
   width: 100vw;
+  height: 15%;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   .contentInfoPerfil {
-    padding: 20px 0 0 20px;
-
     display: flex;
     flex-direction: column;
+
+    padding: 0 0 0 20px;
   }
 
   .contentInfoPerfil strong {
@@ -29,7 +85,11 @@ export const ContentHeader = styled.header`
   }
 
   .contentImgPerfil {
-    padding: 20px 20px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 20px 0 0;
   }
 
   .contentImgPerfil svg {
@@ -43,12 +103,25 @@ export const ContentHeader = styled.header`
 export const ContentCard = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 
   width: 100vw;
+  height: 25%;
 
-  margin: 30px 0;
+  overflow-x: auto;
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    border: 1px solid #1d1e3c;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #282f65;
+    border-radius: 10px;
+  }
 `
 
 export const InfoCard = styled.div`
@@ -59,12 +132,66 @@ export const InfoCard = styled.div`
 
   padding: 15px;
   border-radius: 20px;
-  margin: 0 0 15px 0;
+  margin: 7.5px 0;
 
   background: ${props => props.background};
 
   .infos {
     display: flex;
     flex-direction: column;
+  }
+`
+
+export const InfoPay = styled.ul`
+  width: 95%;
+  height: 90%;
+
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-row-gap: 20px;
+
+  margin: 30px 0 30px 20px;
+
+  overflow: scroll;
+  overflow-x: hidden;
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    border: 1px solid #282f65;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #1d1e3c;
+    border-radius: 10px;
+  }
+
+  li {
+    width: 120px;
+    height: 150px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: ${props => props.theme.colors.primary};
+
+    border-radius: 0 30px 30px 30px;
+
+    strong {
+      padding: 10px;
+    }
+
+    .infoSecondary {
+      font-size: 11px;
+    }
+
+    .value {
+      font-size: 13px;
+      font-weight: 600;
+    }
   }
 `

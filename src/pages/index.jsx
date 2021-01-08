@@ -2,13 +2,23 @@ import Head from 'next/head'
 
 import Perfil from '../assets/images/lucas.svg'
 import Mastercard from '../assets/icons/mastercard.svg'
+import Arrowdown from '../assets/icons/arrowdown.svg'
+import Salary from '../assets/icons/salary.svg'
 
 import {
   Container,
   ContentHeader,
   ContentCard,
-  InfoCard
+  InfoCard,
+  InfoPay
 } from '../styles/pages/Home/styles'
+
+const users = [
+  {
+    name: 'Lucas Felix',
+    balance: '$ 10,00'
+  }
+]
 
 const cards = [
   {
@@ -22,12 +32,45 @@ const cards = [
     number: '4465 1122 3562 6524',
     type: 'Mastercard',
     background: '#FF7A00'
+  },
+  {
+    name: 'Inter',
+    number: '4465 1122 3562 6524',
+    type: 'Mastercard',
+    background: '#FF7A00'
+  },
+  {
+    name: 'Inter',
+    number: '4465 1122 3562 6524',
+    type: 'Mastercard',
+    background: '#FF7A00'
+  }
+]
+
+const payments = [
+  {
+    name: 'Salário',
+    infoSecondary: 'Fixo',
+    value: '$2.000,00'
+  },
+  {
+    name: 'Paypal',
+    infoSecondary: 'Freelance',
+    value: '$45,00'
+  },
+  {
+    name: 'Paypal',
+    infoSecondary: 'Freelance',
+    value: '$45,00'
+  },
+  {
+    name: 'Paypal',
+    infoSecondary: 'Freelance',
+    value: '$45,00'
   }
 ]
 
 export default function Home() {
-  const name = 'Lucas Felix'
-
   function cutName(fullName) {
     const firstName = fullName.split(' ', 2)
 
@@ -42,7 +85,7 @@ export default function Home() {
 
       <ContentHeader>
         <div className="contentInfoPerfil">
-          <strong>Olá {cutName(name)}</strong>
+          <strong>Olá {cutName(users[0].name)}</strong>
           <span>Bem vindo de volta</span>
         </div>
 
@@ -65,7 +108,32 @@ export default function Home() {
         })}
       </ContentCard>
 
-      <main></main>
+      <main>
+        <div className="balance">
+          <span>Saldo</span>
+          <strong>{users[0].balance}</strong>
+        </div>
+        <div className="recipe">
+          <div className="tittle">
+            <span>Próximos pagamentos</span>
+            <div className="rate">
+              <Arrowdown /> 5.9%
+            </div>
+          </div>
+          <InfoPay>
+            {payments.map((value, index) => {
+              return (
+                <li key={index}>
+                  <Salary />
+                  <strong>{value.name}</strong>
+                  <span className="infoSecondary">{value.infoSecondary}</span>
+                  <span className="value">{value.value}</span>
+                </li>
+              )
+            })}
+          </InfoPay>
+        </div>
+      </main>
     </Container>
   )
 }
