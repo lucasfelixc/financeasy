@@ -24,4 +24,8 @@ export default createGlobalStyle`
 
     font-family: 'Poppins', sans-serif;
   }
+
+  a {
+    text-decoration: none;
+  }
 `

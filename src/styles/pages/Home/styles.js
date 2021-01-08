@@ -61,7 +61,7 @@ export const Container = styled.div`
     .contentHistoric {
       padding: 20px 0 0 20px;
 
-      .accessHistoric {
+      a {
         width: 50%;
         height: 40px;
 

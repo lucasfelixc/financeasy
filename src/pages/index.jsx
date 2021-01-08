@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Head from 'next/head'
 
 import Perfil from '../assets/images/lucas.svg'
@@ -135,10 +136,12 @@ export default function Home() {
           </InfoPay>
         </div>
         <div className="contentHistoric">
-          <button className="accessHistoric">
-            <Historic />
-            Histórico de gastos
-          </button>
+          <Link href="/historic">
+            <a>
+              <Historic />
+              Histórico de gastos
+            </a>
+          </Link>
         </div>
       </main>
     </Container>
