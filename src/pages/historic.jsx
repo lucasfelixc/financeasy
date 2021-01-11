@@ -4,12 +4,18 @@ import { Container } from '../styles/pages/Historic/styles'
 
 import Back from '../assets/icons/back.svg'
 
-import { users } from './_data'
+export const users = [
+  {
+    name: 'Lucas Felix',
+    balance: '18468',
+    spending: '13452'
+  }
+]
 
 export default function Historic() {
-  const balance = parseFloat('100')
-  const spending = parseFloat('10')
-  const saved = balance + spending
+  const balance = parseFloat(users[0].balance)
+  const spending = parseFloat(users[0].spending)
+  const saved = balance - spending
 
   return (
     <Container>
@@ -23,7 +29,7 @@ export default function Historic() {
       <main>
         <div className="amount">
           <span>Salvo esse mês</span>
-          <strong>{saved}</strong>
+          <strong>$ {saved.toFixed(2)}</strong>
         </div>
       </main>
     </Container>
