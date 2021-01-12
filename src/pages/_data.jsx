@@ -1,7 +1,28 @@
 export const users = [
   {
     name: 'Lucas Felix',
-    balance: '18468',
+    balance: [
+      {
+        name: 'Salário',
+        infoSecondary: 'Fixo',
+        value: '5300'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '950'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '150'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '450'
+      }
+    ],
     spending: [
       {
         name: 'Comida',
@@ -45,16 +66,10 @@ export const cards = [
     background: '#FF7A00'
   },
   {
-    name: 'Inter',
-    number: '4465 1122 3562 6524',
+    name: 'Pag',
+    number: '4465 1122 4572 3211',
     type: 'Mastercard',
-    background: '#FF7A00'
-  },
-  {
-    name: 'Inter',
-    number: '4465 1122 3562 6524',
-    type: 'Mastercard',
-    background: '#FF7A00'
+    background: '#132D46'
   }
 ]
 
@@ -62,22 +77,22 @@ export const payments = [
   {
     name: 'Salário',
     infoSecondary: 'Fixo',
-    value: '$2.000,00'
+    value: '5300'
   },
   {
     name: 'Paypal',
     infoSecondary: 'Freelance',
-    value: '$45,00'
+    value: '950'
   },
   {
     name: 'Paypal',
     infoSecondary: 'Freelance',
-    value: '$45,00'
+    value: '150'
   },
   {
     name: 'Paypal',
     infoSecondary: 'Freelance',
-    value: '$45,00'
+    value: '450'
   }
 ]
 

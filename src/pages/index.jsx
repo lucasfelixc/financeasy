@@ -15,7 +15,8 @@ import {
   InfoPay
 } from '../styles/pages/Home/styles'
 
-import { users, cards, payments } from './_data'
+import { users, cards } from './_data'
+import Sum from '../utils/sum'
 
 export default function Home() {
   function cutName(fullName) {
@@ -23,6 +24,8 @@ export default function Home() {
 
     return firstName[0]
   }
+
+  const balance = users[0].balance
 
   return (
     <Container>
@@ -58,7 +61,7 @@ export default function Home() {
       <main>
         <div className="balance">
           <span>Saldo</span>
-          <strong>$ {parseFloat(users[0].balance).toFixed(2)}</strong>
+          <strong>$ {Sum(balance).toFixed(2)}</strong>
         </div>
         <div className="recipe">
           <div className="tittle">
@@ -68,13 +71,15 @@ export default function Home() {
             </div>
           </div>
           <InfoPay>
-            {payments.map((value, index) => {
+            {balance.map((value, index) => {
               return (
                 <li key={index}>
                   <Salary />
                   <strong>{value.name}</strong>
                   <span className="infoSecondary">{value.infoSecondary}</span>
-                  <span className="value">{value.value}</span>
+                  <span className="value">
+                    $ {parseFloat(value.value).toFixed(2)}
+                  </span>
                 </li>
               )
             })}

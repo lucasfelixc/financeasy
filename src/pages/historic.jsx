@@ -8,18 +8,15 @@ import Cake from '../assets/icons/cake.svg'
 
 import { users, data } from './_data'
 
+import Sum from '../utils/sum'
+
 export default function Historic() {
   const listSpending = users[0].spending
-  const values = []
-  const reducer = (acumulator, currentValue) => acumulator + currentValue
+  const balance = users[0].balance
 
-  listSpending.map(value => {
-    return values.push(parseFloat(value.value))
-  })
-
-  const spending = values.reduce(reducer)
-  const balance = parseFloat(users[0].balance)
-  const saved = balance - spending
+  const amount = Sum(balance)
+  const spending = Sum(listSpending)
+  const saved = amount - spending
 
   return (
     <Container>
