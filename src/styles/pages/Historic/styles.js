@@ -25,13 +25,17 @@ export const Container = styled.div`
 
       span {
         font-size: 13px;
-        color: #8890BF;
+        color: #8890bf;
       }
 
       strong {
         padding-top: 10px;
         font-size: 30px;
       }
+    }
+
+    .chart {
+      margin: 20px 0;
     }
   }
 `
