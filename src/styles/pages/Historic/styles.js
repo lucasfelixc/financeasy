@@ -39,3 +39,43 @@ export const Container = styled.div`
     }
   }
 `
+
+export const ListCost = styled.ul`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  li {
+    width: 85%;
+    height: 80px;
+
+    margin: 10px 0;
+
+    border-radius: 0 30px 30px 30px;
+
+    background: ${props => props.theme.colors.primary};
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    svg {
+      margin: 0 30px;
+    }
+
+    .contentPrimary {
+      display: flex;
+      align-items: center;
+    }
+
+    .infos {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .value {
+      margin: 0 30px 0 0;
+    }
+  }
+`

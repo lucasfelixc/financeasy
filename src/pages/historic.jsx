@@ -1,9 +1,10 @@
 import Link from 'next/link'
 import { Line } from 'react-chartjs-2'
 
-import { Container } from '../styles/pages/Historic/styles'
+import { Container, ListCost } from '../styles/pages/Historic/styles'
 
 import Back from '../assets/icons/back.svg'
+import Cake from '../assets/icons/cake.svg'
 
 import { users, data } from './_data'
 
@@ -37,6 +38,22 @@ export default function Historic() {
         <div className="chart">
           <Line data={data}></Line>
         </div>
+        <ListCost>
+          {listSpending.map((value, index) => {
+            return (
+              <li key={index}>
+                <div className="contentPrimary">
+                  <Cake />
+                  <div className="infos">
+                    <strong>{value.name}</strong>
+                    <span>{value.description}</span>
+                  </div>
+                </div>
+                <strong className="value">{value.value}</strong>
+              </li>
+            )
+          })}
+        </ListCost>
       </main>
     </Container>
   )
