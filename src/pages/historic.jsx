@@ -8,8 +8,16 @@ import Back from '../assets/icons/back.svg'
 import { users, data } from './_data'
 
 export default function Historic() {
+  const listSpending = users[0].spending
+  const values = []
+  const reducer = (acumulator, currentValue) => acumulator + currentValue
+
+  listSpending.map(value => {
+    return values.push(parseFloat(value.value))
+  })
+
+  const spending = values.reduce(reducer)
   const balance = parseFloat(users[0].balance)
-  const spending = parseFloat(users[0].spending)
   const saved = balance - spending
 
   return (
