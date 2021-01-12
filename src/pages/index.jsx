@@ -58,7 +58,7 @@ export default function Home() {
       <main>
         <div className="balance">
           <span>Saldo</span>
-          <strong>{users[0].balance}</strong>
+          <strong>$ {parseFloat(users[0].balance).toFixed(2)}</strong>
         </div>
         <div className="recipe">
           <div className="tittle">
