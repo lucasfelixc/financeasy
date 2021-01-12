@@ -1,8 +1,8 @@
 export const users = [
   {
     name: 'Lucas Felix',
-    balance: '$ 18.468,00',
-    spending: '$ 13.452,00'
+    balance: '18468',
+    spending: '13452'
   }
 ]
 

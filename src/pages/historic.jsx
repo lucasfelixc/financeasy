@@ -4,13 +4,7 @@ import { Container } from '../styles/pages/Historic/styles'
 
 import Back from '../assets/icons/back.svg'
 
-export const users = [
-  {
-    name: 'Lucas Felix',
-    balance: '18468',
-    spending: '13452'
-  }
-]
+import { users } from './_data'
 
 export default function Historic() {
   const balance = parseFloat(users[0].balance)
