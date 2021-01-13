@@ -6,7 +6,7 @@ import { Container, ListCost } from '../styles/pages/Historic/styles'
 import Back from '../assets/icons/back.svg'
 import Cake from '../assets/icons/cake.svg'
 
-import { users, data } from './_data'
+import { users, data, spending2020 } from './_data'
 
 import Sum from '../utils/sum'
 
@@ -17,6 +17,8 @@ export default function Historic() {
   const amount = Sum(balance)
   const spending = Sum(listSpending)
   const saved = amount - spending
+
+  console.log(spending2020)
 
   return (
     <Container>

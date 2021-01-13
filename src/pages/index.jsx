@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Head from 'next/head'
 
 import Perfil from '../assets/images/lucas.svg'
 import Mastercard from '../assets/icons/mastercard.svg'
@@ -15,7 +14,7 @@ import {
   InfoPay
 } from '../styles/pages/Home/styles'
 
-import { users, cards } from './_data'
+import { users, cards, monthlyEarningsDetail } from './_data'
 import Sum from '../utils/sum'
 
 export default function Home() {
@@ -26,12 +25,11 @@ export default function Home() {
   }
   const balance = users[0].balance
 
+  const date = new Date()
+  const currentMonth = date.getMonth()
+
   return (
     <Container>
-      <Head>
-        <title>Financeasy</title>
-      </Head>
-
       <ContentHeader>
         <div className="contentInfoPerfil">
           <strong>Olá {cutName(users[0].name)}</strong>
@@ -70,7 +68,7 @@ export default function Home() {
             </div>
           </div>
           <InfoPay>
-            {balance.map((value, index) => {
+            {monthlyEarningsDetail[currentMonth].map((value, index) => {
               return (
                 <li key={index}>
                   <Salary />

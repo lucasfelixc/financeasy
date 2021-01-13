@@ -1,4 +1,4 @@
-const users = [
+const usersTest = [
   {
     name: 'Lucas Felix',
     balance: [
@@ -7,7 +7,7 @@ const users = [
           {
             name: 'Salário',
             infoSecondary: 'Fixo',
-            value: '5300'
+            value: '10000'
           },
           {
             name: 'Paypal',
@@ -588,28 +588,30 @@ const users = [
   }
 ]
 
-const spendingTest = users[0].spending
-const spending2020 = []
+const balanceTest = usersTest[0].balance
+// const spending2020 = []
+const monthlyEarningsDetail = []
+// const monthlyEarningsTotal = []
 
-function easyPush(array) {
-  const valueStringMonth = []
-  const valueNumberMonth = []
-  const reducer = (acumulator, currentValue) => acumulator + currentValue
+// function easyPush(array) {
+//   const valueStringMonth = []
+//   const valueNumberMonth = []
+//   const reducer = (acumulator, currentValue) => acumulator + currentValue
 
-  array.map(value => {
-    return valueStringMonth.push(value.value)
-  })
+//   array.forEach(value => {
+//     value.map(value => {
+//       return valueStringMonth.push(value.value)
+//     })
+//   })
 
-  valueStringMonth.map(value => {
-    return valueNumberMonth.push(parseFloat(value))
-  })
+//   valueStringMonth.map(value => {
+//     return valueNumberMonth.push(parseFloat(value))
+//   })
 
-  valueNumberMonth.reduce(reducer)
+//   return console.log(valueStringMonth)
+// }
 
-  return spending2020.push(valueNumberMonth.reduce(reducer))
-}
-
-function testCap(array) {
+function testCap2(array) {
   return array.forEach(value => {
     const jan = value.jan
     const fev = value.fev
@@ -624,19 +626,26 @@ function testCap(array) {
     const nov = value.nov
     const dez = value.dez
 
-    easyPush(jan)
-    easyPush(fev)
-    easyPush(mar)
-    easyPush(abr)
-    easyPush(mai)
-    easyPush(jun)
-    easyPush(jul)
-    easyPush(ago)
-    easyPush(set)
-    easyPush(out)
-    easyPush(nov)
-    easyPush(dez)
+    monthlyEarningsDetail.push(jan)
+    monthlyEarningsDetail.push(fev)
+    monthlyEarningsDetail.push(mar)
+    monthlyEarningsDetail.push(abr)
+    monthlyEarningsDetail.push(mai)
+    monthlyEarningsDetail.push(jun)
+    monthlyEarningsDetail.push(jul)
+    monthlyEarningsDetail.push(ago)
+    monthlyEarningsDetail.push(set)
+    monthlyEarningsDetail.push(out)
+    monthlyEarningsDetail.push(nov)
+    monthlyEarningsDetail.push(dez)
   })
 }
 
-testCap(spendingTest)
+// const date = new Date()
+// const currentMonth = date.getMonth()
+
+testCap2(balanceTest)
+// easyPush(monthlyEarningsDetail)
+monthlyEarningsDetail.forEach(value => {
+  console.log(value.value)
+})
