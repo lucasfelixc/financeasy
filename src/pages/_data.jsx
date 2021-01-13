@@ -304,7 +304,7 @@ export const users = [
           {
             name: 'Comida',
             description: 'Lanches do mês',
-            value: '145',
+            value: '500',
             category: 'food'
           },
           {
@@ -627,82 +627,6 @@ export const cards = [
   }
 ]
 
-export const payments = [
-  {
-    name: 'Salário',
-    infoSecondary: 'Fixo',
-    value: '5300'
-  },
-  {
-    name: 'Paypal',
-    infoSecondary: 'Freelance',
-    value: '950'
-  },
-  {
-    name: 'Paypal',
-    infoSecondary: 'Freelance',
-    value: '150'
-  },
-  {
-    name: 'Paypal',
-    infoSecondary: 'Freelance',
-    value: '450'
-  }
-]
-
-export const spendingTest = users[0].spending
-export const spending2020 = []
-
-function easyPush(array) {
-  const valueStringMonth = []
-  const valueNumberMonth = []
-  const reducer = (acumulator, currentValue) => acumulator + currentValue
-
-  array.map(value => {
-    return valueStringMonth.push(value.value)
-  })
-
-  valueStringMonth.map(value => {
-    return valueNumberMonth.push(parseFloat(value))
-  })
-
-  valueNumberMonth.reduce(reducer)
-
-  return spending2020.push(valueNumberMonth.reduce(reducer))
-}
-
-function testCap2(array) {
-  return array.forEach(value => {
-    const jan = value.jan
-    const fev = value.fev
-    const mar = value.mar
-    const abr = value.abr
-    const mai = value.mai
-    const jun = value.jun
-    const jul = value.jul
-    const ago = value.ago
-    const set = value.set
-    const out = value.out
-    const nov = value.nov
-    const dez = value.dez
-
-    easyPush(jan)
-    easyPush(fev)
-    easyPush(mar)
-    easyPush(abr)
-    easyPush(mai)
-    easyPush(jun)
-    easyPush(jul)
-    easyPush(ago)
-    easyPush(set)
-    easyPush(out)
-    easyPush(nov)
-    easyPush(dez)
-  })
-}
-
-testCap2(spendingTest)
-
 export const data = {
   labels: [
     'Jan',
@@ -738,7 +662,7 @@ export const data = {
       pointHoverBorderWidth: 2,
       pointRadius: 1,
       pointHitRadius: 10,
-      data: spending2020
+      data: monthlySpendingTotal
     }
   ]
 }

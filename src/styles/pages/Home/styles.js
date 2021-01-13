@@ -45,6 +45,32 @@ export const Container = styled.div`
           padding-left: 20px;
         }
 
+        .btn {
+          display: flex;
+          align-items: center;
+
+          .addPay {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 30px;
+            height: 30px;
+
+            border-radius: 50% 50%;
+
+            margin: 0 0 0 20px;
+
+            background: ${props => props.theme.colors.primary};
+
+            transition: 0.3s;
+
+            :hover {
+              background: ${props => props.theme.colors.primaryLight};
+            }
+          }
+        }
+
         .rate {
           font-size: 14px;
 
@@ -79,7 +105,7 @@ export const Container = styled.div`
         transition: 0.3s;
 
         :hover {
-          background: #372397;
+          background: ${props => props.theme.colors.primaryLight};
         }
 
         svg {

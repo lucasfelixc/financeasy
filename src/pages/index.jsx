@@ -5,6 +5,7 @@ import Mastercard from '../assets/icons/mastercard.svg'
 import Arrowdown from '../assets/icons/arrowdown.svg'
 import Salary from '../assets/icons/salary.svg'
 import Historic from '../assets/icons/historic.svg'
+import Plus from '../assets/icons/plus.svg'
 
 import {
   Container,
@@ -64,7 +65,12 @@ export default function Home() {
         </div>
         <div className="recipe">
           <div className="tittle">
-            <span>Próximos pagamentos</span>
+            <div className="btn">
+              <span>Próximos pagamentos</span>
+              <button className="addPay">
+                <Plus />
+              </button>
+            </div>
             <div className="rate">
               <Arrowdown /> 5.9%
             </div>
