@@ -24,7 +24,6 @@ export default function Home() {
 
     return firstName[0]
   }
-
   const balance = users[0].balance
 
   return (

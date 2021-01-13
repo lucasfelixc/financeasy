@@ -1,6 +1,7 @@
 export const users = [
   {
     name: 'Lucas Felix',
+    month: 1,
     balance: [
       {
         name: 'Salário',
@@ -34,6 +35,578 @@ export const users = [
         name: 'Uber',
         description: 'Corridas de uber do mês',
         value: '230',
+        category: 'travel'
+      },
+      {
+        name: 'Netflix',
+        description: 'Mensalidade netflix',
+        value: '25',
+        category: 'entertainment'
+      },
+      {
+        name: 'Aluguel',
+        description: 'Pagamento de aluguel',
+        value: '1200',
+        category: 'fixedCost'
+      }
+    ]
+  },
+  {
+    name: 'Lucas Felix',
+    month: 2,
+    balance: [
+      {
+        name: 'Salário',
+        infoSecondary: 'Fixo',
+        value: '5300'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '600'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '150'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '450'
+      }
+    ],
+    spending: [
+      {
+        name: 'Comida',
+        description: 'Lanches do mês',
+        value: '180',
+        category: 'food'
+      },
+      {
+        name: 'Uber',
+        description: 'Corridas de uber do mês',
+        value: '200',
+        category: 'travel'
+      },
+      {
+        name: 'Netflix',
+        description: 'Mensalidade netflix',
+        value: '25',
+        category: 'entertainment'
+      },
+      {
+        name: 'Aluguel',
+        description: 'Pagamento de aluguel',
+        value: '1200',
+        category: 'fixedCost'
+      }
+    ]
+  },
+  {
+    name: 'Lucas Felix',
+    month: 3,
+    balance: [
+      {
+        name: 'Salário',
+        infoSecondary: 'Fixo',
+        value: '5300'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '1250'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '150'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '450'
+      }
+    ],
+    spending: [
+      {
+        name: 'Comida',
+        description: 'Lanches do mês',
+        value: '400',
+        category: 'food'
+      },
+      {
+        name: 'Uber',
+        description: 'Corridas de uber do mês',
+        value: '250',
+        category: 'travel'
+      },
+      {
+        name: 'Netflix',
+        description: 'Mensalidade netflix',
+        value: '25',
+        category: 'entertainment'
+      },
+      {
+        name: 'Aluguel',
+        description: 'Pagamento de aluguel',
+        value: '1200',
+        category: 'fixedCost'
+      }
+    ]
+  },
+  {
+    name: 'Lucas Felix',
+    month: 4,
+    balance: [
+      {
+        name: 'Salário',
+        infoSecondary: 'Fixo',
+        value: '5300'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '950'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '550'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '450'
+      }
+    ],
+    spending: [
+      {
+        name: 'Comida',
+        description: 'Lanches do mês',
+        value: '300',
+        category: 'food'
+      },
+      {
+        name: 'Uber',
+        description: 'Corridas de uber do mês',
+        value: '280',
+        category: 'travel'
+      },
+      {
+        name: 'Netflix',
+        description: 'Mensalidade netflix',
+        value: '25',
+        category: 'entertainment'
+      },
+      {
+        name: 'Aluguel',
+        description: 'Pagamento de aluguel',
+        value: '1200',
+        category: 'fixedCost'
+      }
+    ]
+  },
+  {
+    name: 'Lucas Felix',
+    month: 5,
+    balance: [
+      {
+        name: 'Salário',
+        infoSecondary: 'Fixo',
+        value: '5300'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '950'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '150'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '630'
+      }
+    ],
+    spending: [
+      {
+        name: 'Comida',
+        description: 'Lanches do mês',
+        value: '360',
+        category: 'food'
+      },
+      {
+        name: 'Uber',
+        description: 'Corridas de uber do mês',
+        value: '230',
+        category: 'travel'
+      },
+      {
+        name: 'Netflix',
+        description: 'Mensalidade netflix',
+        value: '25',
+        category: 'entertainment'
+      },
+      {
+        name: 'Aluguel',
+        description: 'Pagamento de aluguel',
+        value: '1200',
+        category: 'fixedCost'
+      }
+    ]
+  },
+  {
+    name: 'Lucas Felix',
+    month: 6,
+    balance: [
+      {
+        name: 'Salário',
+        infoSecondary: 'Fixo',
+        value: '5300'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '1400'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '150'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '450'
+      }
+    ],
+    spending: [
+      {
+        name: 'Comida',
+        description: 'Lanches do mês',
+        value: '450',
+        category: 'food'
+      },
+      {
+        name: 'Uber',
+        description: 'Corridas de uber do mês',
+        value: '260',
+        category: 'travel'
+      },
+      {
+        name: 'Netflix',
+        description: 'Mensalidade netflix',
+        value: '25',
+        category: 'entertainment'
+      },
+      {
+        name: 'Aluguel',
+        description: 'Pagamento de aluguel',
+        value: '1200',
+        category: 'fixedCost'
+      }
+    ]
+  },
+  {
+    name: 'Lucas Felix',
+    month: 7,
+    balance: [
+      {
+        name: 'Salário',
+        infoSecondary: 'Fixo',
+        value: '5300'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '1000'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '150'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '450'
+      }
+    ],
+    spending: [
+      {
+        name: 'Comida',
+        description: 'Lanches do mês',
+        value: '300',
+        category: 'food'
+      },
+      {
+        name: 'Uber',
+        description: 'Corridas de uber do mês',
+        value: '200',
+        category: 'travel'
+      },
+      {
+        name: 'Netflix',
+        description: 'Mensalidade netflix',
+        value: '25',
+        category: 'entertainment'
+      },
+      {
+        name: 'Aluguel',
+        description: 'Pagamento de aluguel',
+        value: '1200',
+        category: 'fixedCost'
+      }
+    ]
+  },
+  {
+    name: 'Lucas Felix',
+    month: 8,
+    balance: [
+      {
+        name: 'Salário',
+        infoSecondary: 'Fixo',
+        value: '5300'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '800'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '150'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '450'
+      }
+    ],
+    spending: [
+      {
+        name: 'Comida',
+        description: 'Lanches do mês',
+        value: '120',
+        category: 'food'
+      },
+      {
+        name: 'Uber',
+        description: 'Corridas de uber do mês',
+        value: '200',
+        category: 'travel'
+      },
+      {
+        name: 'Netflix',
+        description: 'Mensalidade netflix',
+        value: '25',
+        category: 'entertainment'
+      },
+      {
+        name: 'Aluguel',
+        description: 'Pagamento de aluguel',
+        value: '1200',
+        category: 'fixedCost'
+      }
+    ]
+  },
+  {
+    name: 'Lucas Felix',
+    month: 9,
+    balance: [
+      {
+        name: 'Salário',
+        infoSecondary: 'Fixo',
+        value: '5300'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '950'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '350'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '450'
+      }
+    ],
+    spending: [
+      {
+        name: 'Comida',
+        description: 'Lanches do mês',
+        value: '145',
+        category: 'food'
+      },
+      {
+        name: 'Uber',
+        description: 'Corridas de uber do mês',
+        value: '250',
+        category: 'travel'
+      },
+      {
+        name: 'Netflix',
+        description: 'Mensalidade netflix',
+        value: '25',
+        category: 'entertainment'
+      },
+      {
+        name: 'Aluguel',
+        description: 'Pagamento de aluguel',
+        value: '1200',
+        category: 'fixedCost'
+      }
+    ]
+  },
+  {
+    name: 'Lucas Felix',
+    month: 10,
+    balance: [
+      {
+        name: 'Salário',
+        infoSecondary: 'Fixo',
+        value: '5300'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '950'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '150'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '550'
+      }
+    ],
+    spending: [
+      {
+        name: 'Comida',
+        description: 'Lanches do mês',
+        value: '200',
+        category: 'food'
+      },
+      {
+        name: 'Uber',
+        description: 'Corridas de uber do mês',
+        value: '250',
+        category: 'travel'
+      },
+      {
+        name: 'Netflix',
+        description: 'Mensalidade netflix',
+        value: '25',
+        category: 'entertainment'
+      },
+      {
+        name: 'Aluguel',
+        description: 'Pagamento de aluguel',
+        value: '1200',
+        category: 'fixedCost'
+      }
+    ]
+  },
+  {
+    name: 'Lucas Felix',
+    month: 11,
+    balance: [
+      {
+        name: 'Salário',
+        infoSecondary: 'Fixo',
+        value: '5300'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '950'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '150'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '450'
+      }
+    ],
+    spending: [
+      {
+        name: 'Comida',
+        description: 'Lanches do mês',
+        value: '180',
+        category: 'food'
+      },
+      {
+        name: 'Uber',
+        description: 'Corridas de uber do mês',
+        value: '230',
+        category: 'travel'
+      },
+      {
+        name: 'Netflix',
+        description: 'Mensalidade netflix',
+        value: '25',
+        category: 'entertainment'
+      },
+      {
+        name: 'Aluguel',
+        description: 'Pagamento de aluguel',
+        value: '1200',
+        category: 'fixedCost'
+      }
+    ]
+  },
+  {
+    name: 'Lucas Felix',
+    month: 12,
+    balance: [
+      {
+        name: 'Salário',
+        infoSecondary: 'Fixo',
+        value: '5300'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '1300'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '150'
+      },
+      {
+        name: 'Paypal',
+        infoSecondary: 'Freelance',
+        value: '450'
+      }
+    ],
+    spending: [
+      {
+        name: 'Comida',
+        description: 'Lanches do mês',
+        value: '350',
+        category: 'food'
+      },
+      {
+        name: 'Uber',
+        description: 'Corridas de uber do mês',
+        value: '250',
         category: 'travel'
       },
       {
@@ -97,7 +670,19 @@ export const payments = [
 ]
 
 export const data = {
-  labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+  labels: [
+    'Jan',
+    'Fev',
+    'Mar',
+    'Abr',
+    'Mai',
+    'Jun',
+    'Ago',
+    'Set',
+    'Out',
+    'Nov',
+    'Dez'
+  ],
   datasets: [
     {
       label: 'Gastos',

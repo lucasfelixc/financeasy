@@ -46,7 +46,9 @@ export default function Historic() {
                     <span>{value.description}</span>
                   </div>
                 </div>
-                <strong className="value">{value.value}</strong>
+                <strong className="value">
+                  $ {parseFloat(value.value).toFixed(2)}
+                </strong>
               </li>
             )
           })}
