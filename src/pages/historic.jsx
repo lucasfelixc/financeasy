@@ -6,19 +6,18 @@ import { Container, ListCost } from '../styles/pages/Historic/styles'
 import Back from '../assets/icons/back.svg'
 import Cake from '../assets/icons/cake.svg'
 
-import { users, data, spending2020 } from './_data'
+import {
+  data,
+  monthlySpendingDetail,
+  monthlySpendingTotal,
+  monthlyEarningsTotal
+} from './_data'
 
-import Sum from '../utils/sum'
+import { currentMonth } from '../utils/currentDate'
 
 export default function Historic() {
-  const listSpending = users[0].spending
-  const balance = users[0].balance
-
-  const amount = Sum(balance)
-  const spending = Sum(listSpending)
-  const saved = amount - spending
-
-  console.log(spending2020)
+  const saved =
+    monthlyEarningsTotal[currentMonth] - monthlySpendingTotal[currentMonth]
 
   return (
     <Container>
@@ -38,7 +37,7 @@ export default function Historic() {
           <Line data={data}></Line>
         </div>
         <ListCost>
-          {listSpending.map((value, index) => {
+          {monthlySpendingDetail[currentMonth].map((value, index) => {
             return (
               <li key={index}>
                 <div className="contentPrimary">

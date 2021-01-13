@@ -14,8 +14,14 @@ import {
   InfoPay
 } from '../styles/pages/Home/styles'
 
-import { users, cards, monthlyEarningsDetail } from './_data'
-import Sum from '../utils/sum'
+import {
+  users,
+  cards,
+  monthlyEarningsDetail,
+  monthlyEarningsTotal
+} from './_data'
+
+import { currentMonth } from '../utils/currentDate'
 
 export default function Home() {
   function cutName(fullName) {
@@ -23,10 +29,6 @@ export default function Home() {
 
     return firstName[0]
   }
-  const balance = users[0].balance
-
-  const date = new Date()
-  const currentMonth = date.getMonth()
 
   return (
     <Container>
@@ -58,7 +60,7 @@ export default function Home() {
       <main>
         <div className="balance">
           <span>Saldo</span>
-          <strong>$ {Sum(balance).toFixed(2)}</strong>
+          <strong>$ {monthlyEarningsTotal[currentMonth].toFixed(2)}</strong>
         </div>
         <div className="recipe">
           <div className="tittle">
