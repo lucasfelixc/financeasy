@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const Container = styled.div`
   width: 100vw;
@@ -60,6 +60,8 @@ export const Container = styled.div`
             border-radius: 50% 50%;
 
             margin: 0 0 0 20px;
+
+            z-index: 15;
 
             background: ${props => props.theme.colors.primary};
 
@@ -250,4 +252,29 @@ export const InfoPay = styled.ul`
       font-weight: 600;
     }
   }
+`
+
+export const Shadow = styled.div`
+  ${props => {
+    if (props.display) {
+      return css`
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+
+        background: rgba(34, 32, 40, 0.5);
+
+        z-index: 10;
+        top: 0;
+        left: 0;
+
+        position: absolute;
+      `
+    } else {
+      return css`
+        display: none;
+      `
+    }
+  }}
 `

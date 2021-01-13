@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Link from 'next/link'
 
 import Perfil from '../assets/images/lucas.svg'
@@ -7,12 +8,15 @@ import Salary from '../assets/icons/salary.svg'
 import Historic from '../assets/icons/historic.svg'
 import Plus from '../assets/icons/plus.svg'
 
+import BoxAdd from '../pages/Components/BoxAdd'
+
 import {
   Container,
   ContentHeader,
   ContentCard,
   InfoCard,
-  InfoPay
+  InfoPay,
+  Shadow
 } from '../styles/pages/Home/styles'
 
 import {
@@ -25,10 +29,20 @@ import {
 import { currentMonth } from '../utils/currentDate'
 
 export default function Home() {
+  const [display, setDisplay] = useState(false)
+
   function cutName(fullName) {
     const firstName = fullName.split(' ', 2)
 
     return firstName[0]
+  }
+
+  function handleBoxClick() {
+    if (display) {
+      setDisplay(false)
+    } else {
+      setDisplay(true)
+    }
   }
 
   return (
@@ -67,11 +81,13 @@ export default function Home() {
           <div className="tittle">
             <div className="btn">
               <span>Próximos pagamentos</span>
-              <button className="addPay">
+              <button className="addPay" onClick={handleBoxClick}>
                 <Plus />
               </button>
+              <BoxAdd display={display} />
+              <Shadow display={display} />
             </div>
-            <div className="rate">
+            <div className="rate" display={display}>
               <Arrowdown /> 5.9%
             </div>
           </div>
