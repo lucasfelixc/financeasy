@@ -28,4 +28,12 @@ export default createGlobalStyle`
   a {
     text-decoration: none;
   }
+
+  input {
+    outline: none;
+
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Poppins, sans-serif;
+  }
 `

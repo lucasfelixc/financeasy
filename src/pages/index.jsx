@@ -45,6 +45,10 @@ export default function Home() {
     }
   }
 
+  function handleShadowClick() {
+    setDisplay(false)
+  }
+
   return (
     <Container>
       <ContentHeader>
@@ -84,8 +88,13 @@ export default function Home() {
               <button className="addPay" onClick={handleBoxClick}>
                 <Plus />
               </button>
-              <BoxAdd display={display} />
-              <Shadow display={display} />
+              <BoxAdd
+                display={display}
+                position="absolute"
+                left="218px"
+                top="55px"
+              />
+              <Shadow display={display} onClick={handleShadowClick} />
             </div>
             <div className="rate" display={display}>
               <Arrowdown /> 5.9%

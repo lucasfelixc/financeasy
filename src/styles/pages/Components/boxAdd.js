@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 
 export const Container = styled.div`
   width: 200px;
-  height: 200px;
+  height: 300px;
 
   z-index: 15;
 
@@ -13,6 +13,27 @@ export const Container = styled.div`
 
   input {
     width: 90%;
+    height: 30px;
+
+    border-radius: 8px;
+
+    border: 1px solid #6d5db6;
+    outline: none;
+
+    padding: 0 0 0 15px;
+
+    background: ${props => props.theme.colors.primary};
+    color: #ffffff;
+    font-size: 13px;
+  }
+
+  input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  input[type='number'] {
+    -moz-appearance: textfield;
+    appearance: textfield;
   }
 
   .content {
@@ -41,13 +62,28 @@ export const Container = styled.div`
 
   background: linear-gradient(180deg, #6247E6 0%, #4733A6 100%);
 
-  position: absolute;
-  left: 218px;
-  top: 156px;
+  position: ${props => props.position};
+  left: ${props => props.left};
+  top: ${props => props.top};
 
   border-radius: 40px 40px 40px 0;
 
-  h1 {
-    font-size: 10px;
+  button {
+    width: 90%;
+    height: 35px;
+
+    margin-top: 20px;
+    border-radius: 15px;
+
+    background: #735cdd;
+
+    transition: 0.3s;
+
+    font-weight: 600;
+    color: #ffffff;
+
+    :hover {
+      background: #8167ff;
+    }
   }
 `

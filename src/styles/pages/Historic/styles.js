@@ -37,6 +37,34 @@ export const Container = styled.div`
     .chart {
       margin: 20px 0;
     }
+
+    .btn {
+      display: flex;
+      align-items: center;
+
+      .addPay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 30px;
+        height: 30px;
+
+        border-radius: 50% 50%;
+
+        margin-left: 7.5%;
+
+        z-index: 15;
+
+        background: ${props => props.theme.colors.primary};
+
+        transition: 0.3s;
+
+        :hover {
+          background: ${props => props.theme.colors.primaryLight};
+        }
+      }
+    }
   }
 `
 
