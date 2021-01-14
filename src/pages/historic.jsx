@@ -38,8 +38,12 @@ export default function Historic() {
     setDisplay(false)
   }
 
+  function sendInfos(...adc) {
+    console.log(adc)
+  }
+
   return (
-    <Container>
+    <Container display={display}>
       <header>
         <Link href="/">
           <a>
@@ -61,9 +65,12 @@ export default function Historic() {
           </button>
           <BoxAdd
             display={display}
+            spending={true}
             position="absolute"
+            height="380px"
             left="11.5%"
-            top="145px"
+            top="65px"
+            values={sendInfos}
           />
           <Shadow display={display} onClick={handleShadowClick} />
         </div>

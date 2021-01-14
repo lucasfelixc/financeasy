@@ -50,7 +50,7 @@ export default function Home() {
   }
 
   return (
-    <Container>
+    <Container display={display}>
       <ContentHeader>
         <div className="contentInfoPerfil">
           <strong>Olá {cutName(users[0].name)}</strong>
@@ -91,6 +91,7 @@ export default function Home() {
               <BoxAdd
                 display={display}
                 position="absolute"
+                height="300px"
                 left="218px"
                 top="55px"
               />

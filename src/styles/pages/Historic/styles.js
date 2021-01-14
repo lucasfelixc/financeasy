@@ -1,8 +1,16 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const Container = styled.div`
   width: 100vw;
   height: 100vh;
+
+  ${props => {
+    if (props.display) {
+      return css`
+        overflow: hidden;
+      `
+    }
+  }}
 
   header {
     width: 100%;

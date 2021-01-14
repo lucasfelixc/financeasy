@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 
 export const Container = styled.div`
   width: 200px;
-  height: 300px;
+  height: ${props => props.height};
 
   z-index: 15;
 
@@ -11,7 +11,8 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
 
-  input {
+  input,
+  select {
     width: 90%;
     height: 30px;
 
@@ -41,6 +42,8 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: center;
 
+    width: 90%;
+
     margin: 10px 0 0 10px;
 
     label {
@@ -69,7 +72,7 @@ export const Container = styled.div`
   border-radius: 40px 40px 40px 0;
 
   button {
-    width: 90%;
+    width: 80%;
     height: 35px;
 
     margin-top: 20px;

@@ -29,7 +29,7 @@ export default createGlobalStyle`
     text-decoration: none;
   }
 
-  input {
+  input, select {
     outline: none;
 
     font-size: 16px;

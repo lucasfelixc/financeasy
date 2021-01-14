@@ -4,6 +4,14 @@ export const Container = styled.div`
   width: 100vw;
   height: 100vh;
 
+  ${props => {
+    if (props.display) {
+      return css`
+        overflow: hidden;
+      `
+    }
+  }}
+
   main {
     width: 100%;
     height: 60%;
