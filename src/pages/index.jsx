@@ -49,6 +49,10 @@ export default function Home() {
     setDisplay(false)
   }
 
+  function sendInfo(...adc) {
+    console.log(adc)
+  }
+
   return (
     <Container display={display}>
       <ContentHeader>
@@ -94,6 +98,7 @@ export default function Home() {
                 height="300px"
                 left="218px"
                 top="55px"
+                values={sendInfo}
               />
               <Shadow display={display} onClick={handleShadowClick} />
             </div>

@@ -11,6 +11,7 @@ import Plus from '../assets/icons/plus.svg'
 
 import {
   data,
+  options,
   monthlySpendingDetail,
   monthlySpendingTotal,
   monthlyEarningsTotal
@@ -22,6 +23,17 @@ import { currentMonth } from '../utils/currentDate'
 
 export default function Historic() {
   const [display, setDisplay] = useState(false)
+
+  const info = []
+
+  const dataAdd = {
+    name: info[0],
+    description: info[1],
+    value: info[2],
+    category: info[3]
+  }
+
+  monthlySpendingDetail[currentMonth].push(dataAdd)
 
   const saved =
     monthlyEarningsTotal[currentMonth] - monthlySpendingTotal[currentMonth]
@@ -38,8 +50,8 @@ export default function Historic() {
     setDisplay(false)
   }
 
-  function sendInfos(...adc) {
-    console.log(adc)
+  function sendInfos([...adc]) {
+    info.push(adc)
   }
 
   return (
@@ -57,7 +69,7 @@ export default function Historic() {
           <strong>$ {saved.toFixed(2)}</strong>
         </div>
         <div className="chart">
-          <Line data={data}></Line>
+          <Line data={data} options={options} />
         </div>
         <div className="btn">
           <button className="addPay" onClick={handleBoxClick}>

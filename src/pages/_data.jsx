@@ -666,3 +666,25 @@ export const data = {
     }
   ]
 }
+
+export const options = {
+  scales: {
+    yAxes: [
+      {
+        ticks: {
+          display: false
+        },
+        gridLines: {
+          display: false
+        }
+      }
+    ],
+    xAxes: [
+      {
+        gridLines: {
+          display: false
+        }
+      }
+    ]
+  }
+}

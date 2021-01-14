@@ -1,8 +1,25 @@
-import styled, { css } from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
+
+const showBox = keyframes`
+  from {
+    width: 0px;
+  }
+  to {
+    width: 200px
+  }
+`
+
+const opacityElements = keyframes`
+  from {opacity: 0%}
+  to {opacity: 100%}
+`
 
 export const Container = styled.div`
   width: 200px;
   height: ${props => props.height};
+
+  animation-name: ${showBox};
+  animation-duration: 0.3s;
 
   z-index: 15;
 
@@ -15,6 +32,9 @@ export const Container = styled.div`
   select {
     width: 90%;
     height: 30px;
+
+    animation-name: ${opacityElements};
+    animation-duration: 2s;
 
     border-radius: 8px;
 
@@ -48,6 +68,9 @@ export const Container = styled.div`
 
     label {
       font-weight: 600;
+
+      animation-name: ${opacityElements};
+      animation-duration: 2s;
     }
   }
 
@@ -74,6 +97,9 @@ export const Container = styled.div`
   button {
     width: 80%;
     height: 35px;
+
+    animation-name: ${opacityElements};
+    animation-duration: 2.5s;
 
     margin-top: 20px;
     border-radius: 15px;

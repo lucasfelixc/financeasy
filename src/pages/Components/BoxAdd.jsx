@@ -17,7 +17,9 @@ export default function BoxAdd({
   const [textCategory, setTextCategory] = useState('')
 
   function handleClickAdd() {
-    values(textName, textDescription, textValue, textCategory)
+    spending
+      ? values(textName, textDescription, textValue, textCategory)
+      : values(textName, textDescription, textValue)
   }
 
   function handleChangeName(e) {
