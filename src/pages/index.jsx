@@ -71,7 +71,11 @@ export default function Home() {
       <ContentCard>
         {cards.map((value, index) => {
           return (
-            <InfoCard key={index} background={value.background}>
+            <InfoCard
+              className={value.name}
+              key={index}
+              background={value.background}
+            >
               <div className="infos">
                 <strong>{value.name}</strong>
                 <span>{value.number}</span>
@@ -99,7 +103,7 @@ export default function Home() {
                 position="absolute"
                 height="300px"
                 left="218px"
-                top="55px"
+                top="-207px"
                 values={sendInfo}
               />
               <Shadow display={display} onClick={handleShadowClick} />

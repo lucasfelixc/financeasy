@@ -1,8 +1,37 @@
-import styled, { css } from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
+
+const textReveal = keyframes`
+  from {
+    transform: translateX(-101%);
+  }
+
+  to {
+    transform: translateX(101%);
+  }
+`
+
+const fade = keyframes`
+  to {opacity: 1;}
+`
 
 export const Container = styled.div`
   width: 100vw;
   height: 100vh;
+
+  overflow-x: hidden;
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    border: 1px solid #1d1e3c;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #282f65;
+    border-radius: 10px;
+  }
 
   ${props => {
     if (props.display) {
@@ -36,9 +65,29 @@ export const Container = styled.div`
         color: #8890bf;
       }
 
-      strong {
-        padding-top: 10px;
+      .wrapperName {
+        margin-top: 10px;
+        overflow: hidden;
+        position: relative;
+
+        ::after {
+          animation: ${textReveal} 1s cubic-bezier(0.85, 0, 0.15, 1) forwards;
+          background-color: ${props => props.theme.colors.backgroundSecondary};
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          bottom: 0;
+        }
+      }
+
+      .wrapperName strong {
         font-size: 30px;
+        opacity: 0;
+
+        animation: ${fade} 1ms 0.5s forwards;
       }
     }
 

@@ -10,6 +10,32 @@ const textReveal = keyframes`
   }
 `
 
+const boxReveal = keyframes`
+  0% {
+    transform: translateY(100%);
+  }
+
+  95% {
+    transform: translateY(-20px);
+  }
+
+  96% {
+    transform: translateY(-15px);
+  }
+
+  97% {
+    transform: translateY(-10px);
+  }
+
+  98% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+`
+
 const fade = keyframes`
   to {opacity: 1;}
 `
@@ -17,6 +43,8 @@ const fade = keyframes`
 export const Container = styled.div`
   width: 100vw;
   height: 100vh;
+
+  overflow: hidden;
 
   ${props => {
     if (props.display) {
@@ -32,6 +60,10 @@ export const Container = styled.div`
     background: ${props => props.theme.colors.backgroundSecondary};
 
     border-radius: 0 70px 0 0;
+
+    transform: translateY(100%);
+
+    animation: ${boxReveal} 0.5s ease-out 1s forwards;
 
     .balance {
       height: 20%;
@@ -205,10 +237,14 @@ export const ContentCard = styled.div`
   flex-direction: column;
   align-items: center;
 
+  opacity: 0;
+
   width: 100vw;
   height: 25%;
 
   overflow-x: auto;
+
+  animation: ${fade} 2s cubic-bezier(1, 1, 0.75, 0.5) 2s forwards;
 
   ::-webkit-scrollbar {
     width: 10px;
@@ -300,8 +336,8 @@ export const Shadow = styled.div`
   ${props => {
     if (props.display) {
       return css`
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
 
         display: flex;
 
@@ -310,6 +346,8 @@ export const Shadow = styled.div`
         z-index: 10;
         top: 0;
         left: 0;
+
+        border-radius: 0 70px 0 0;
 
         position: absolute;
       `

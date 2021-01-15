@@ -66,7 +66,9 @@ export default function Historic() {
       <main>
         <div className="amount">
           <span>Salvo esse mês</span>
-          <strong>$ {saved.toFixed(2)}</strong>
+          <div className="wrapperName">
+            <strong>$ {saved.toFixed(2)}</strong>
+          </div>
         </div>
         <div className="chart">
           <Line data={data} options={options} />
