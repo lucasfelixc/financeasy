@@ -592,7 +592,7 @@ export const users = [
 ]
 
 const infoBalance = users[0].balance
-const infoSpending = users[0].spending
+export const infoSpending = users[0].spending
 
 export const monthlyEarningsDetail = []
 export const monthlyEarningsTotal = []

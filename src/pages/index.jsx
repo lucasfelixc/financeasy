@@ -101,6 +101,7 @@ export default function Home() {
               <BoxAdd
                 display={display}
                 position="absolute"
+                spending={false}
                 height="300px"
                 left="218px"
                 top="-207px"

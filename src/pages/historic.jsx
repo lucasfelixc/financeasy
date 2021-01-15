@@ -10,6 +10,7 @@ import Cake from '../assets/icons/cake.svg'
 import Plus from '../assets/icons/plus.svg'
 
 import {
+  infoSpending,
   data,
   options,
   monthlySpendingDetail,
@@ -23,17 +24,7 @@ import { currentMonth } from '../utils/currentDate'
 
 export default function Historic() {
   const [display, setDisplay] = useState(false)
-
-  const info = []
-
-  const dataAdd = {
-    name: info[0],
-    description: info[1],
-    value: info[2],
-    category: info[3]
-  }
-
-  monthlySpendingDetail[currentMonth].push(dataAdd)
+  const placeAdd = infoSpending[0].jan
 
   const saved =
     monthlyEarningsTotal[currentMonth] - monthlySpendingTotal[currentMonth]
@@ -50,8 +41,19 @@ export default function Historic() {
     setDisplay(false)
   }
 
-  function sendInfos([...adc]) {
+  function sendInfos(...adc) {
+    const info = []
+
     info.push(adc)
+
+    const dataAdd = {
+      name: info[0][0],
+      description: info[0][1],
+      value: info[0][2],
+      category: info[0][3]
+    }
+
+    placeAdd.push(dataAdd)
   }
 
   return (

@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import PropTypes from 'prop-types'
 
 import theme from '../styles/theme'
@@ -7,10 +8,15 @@ import { ThemeProvider } from 'styled-components'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
-      <GlobalStyles />
-    </ThemeProvider>
+    <>
+      <Head>
+        <title>Financeasy</title>
+      </Head>
+      <ThemeProvider theme={theme}>
+        <Component {...pageProps} />
+        <GlobalStyles />
+      </ThemeProvider>
+    </>
   )
 }
 
