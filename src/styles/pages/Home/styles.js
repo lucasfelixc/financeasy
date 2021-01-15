@@ -246,7 +246,7 @@ export const ContentCard = styled.div`
   opacity: 0;
 
   width: 100vw;
-  height: 25%;
+  height: 40%;
 
   overflow-x: auto;
 
