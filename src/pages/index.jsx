@@ -24,7 +24,7 @@ import {
   cards,
   monthlyEarningsDetail,
   monthlyEarningsTotal
-} from './_data'
+} from '../service/data'
 
 import { currentMonth } from '../utils/currentDate'
 

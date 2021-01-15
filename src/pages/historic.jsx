@@ -15,7 +15,7 @@ import {
   monthlySpendingDetail,
   monthlySpendingTotal,
   monthlyEarningsTotal
-} from './_data'
+} from '../service/data'
 
 import BoxAdd from '../pages/Components/BoxAdd'
 

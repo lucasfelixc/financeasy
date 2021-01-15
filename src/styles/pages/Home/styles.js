@@ -63,7 +63,7 @@ export const Container = styled.div`
 
     transform: translateY(100%);
 
-    animation: ${boxReveal} 0.5s ease-out 1s forwards;
+    animation: ${boxReveal} 0.3s ease-out 1s forwards;
 
     .balance {
       height: 20%;
