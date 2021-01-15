@@ -246,9 +246,9 @@ export const ContentCard = styled.div`
   opacity: 0;
 
   width: 100vw;
-  height: 40%;
+  height: 25%;
 
-  overflow-x: auto;
+  overflow-y: auto;
 
   animation: ${fade} 2s cubic-bezier(1, 1, 0.75, 0.5) 2s forwards;
 
