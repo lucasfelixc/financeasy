@@ -57,7 +57,9 @@ export default function Home() {
     <Container display={display}>
       <ContentHeader>
         <div className="contentInfoPerfil">
-          <strong>Olá {cutName(users[0].name)}</strong>
+          <div className="wrapperName">
+            <strong>Olá {cutName(users[0].name)}</strong>
+          </div>
           <span>Bem vindo de volta</span>
         </div>
 

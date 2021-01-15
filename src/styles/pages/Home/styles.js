@@ -1,4 +1,18 @@
-import styled, { css } from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
+
+const textReveal = keyframes`
+  from {
+    transform: translateX(-101%);
+  }
+
+  to {
+    transform: translateX(101%);
+  }
+`
+
+const fade = keyframes`
+  to {opacity: 1;}
+`
 
 export const Container = styled.div`
   width: 100vw;
@@ -139,15 +153,35 @@ export const ContentHeader = styled.header`
     flex-direction: column;
 
     padding: 0 0 0 20px;
-  }
 
-  .contentInfoPerfil strong {
-    font-size: 20px;
-  }
+    .wrapperName {
+      overflow: hidden;
+      position: relative;
 
-  .contentInfoPerfil span {
-    font-size: 10px;
-    color: #6d749e;
+      ::after {
+        animation: ${textReveal} 1s cubic-bezier(0.85, 0, 0.15, 1) forwards;
+        background-color: ${props => props.theme.colors.backgroundSecondary};
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+      }
+    }
+
+    .wrapperName strong {
+      font-size: 20px;
+      opacity: 0;
+
+      animation: ${fade} 1ms 0.5s forwards;
+    }
+
+    span {
+      font-size: 10px;
+      color: #6d749e;
+    }
   }
 
   .contentImgPerfil {
