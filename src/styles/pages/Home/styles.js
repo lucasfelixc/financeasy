@@ -46,6 +46,8 @@ export const Container = styled.div`
 
   overflow: hidden;
 
+  position: relative;
+
   ${props => {
     if (props.display) {
       return css`
@@ -64,6 +66,10 @@ export const Container = styled.div`
     transform: translateY(100%);
 
     animation: ${boxReveal} 0.3s ease-out 1s forwards;
+
+    position: absolute;
+    top: 40%;
+    left: 0;
 
     .balance {
       height: 20%;
@@ -262,7 +268,7 @@ export const ContentCard = styled.div`
 
 export const InfoCard = styled.div`
   width: 80%;
-  height: 80px;
+  height: auto;
 
   display: flex;
   justify-content: space-between;
