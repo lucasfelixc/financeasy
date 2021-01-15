@@ -262,6 +262,7 @@ export const ContentCard = styled.div`
 
 export const InfoCard = styled.div`
   width: 80%;
+  height: auto;
 
   display: flex;
   justify-content: space-between;
