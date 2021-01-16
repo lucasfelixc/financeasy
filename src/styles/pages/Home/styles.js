@@ -46,7 +46,8 @@ export const Container = styled.div`
 
   overflow: hidden;
 
-  position: relative;
+  display: flex;
+  flex-direction: column;
 
   ${props => {
     if (props.display) {
@@ -66,10 +67,6 @@ export const Container = styled.div`
     transform: translateY(100%);
 
     animation: ${boxReveal} 0.3s ease-out 1s forwards;
-
-    position: absolute;
-    top: 40%;
-    left: 0;
 
     .balance {
       height: 20%;
@@ -248,7 +245,7 @@ export const ContentCard = styled.div`
   width: 100vw;
   height: 25%;
 
-  overflow-y: auto;
+  overflow-y: scroll;
 
   animation: ${fade} 2s cubic-bezier(1, 1, 0.75, 0.5) 2s forwards;
 
