@@ -31,7 +31,7 @@ const boxReveal = keyframes`
     transform: translateY(-5px);
   }
 
-  to {
+  100% {
     transform: translateY(0);
   }
 `
@@ -46,8 +46,7 @@ export const Container = styled.div`
 
   overflow: hidden;
 
-  display: flex;
-  flex-direction: column;
+  position: relative;
 
   ${props => {
     if (props.display) {
@@ -58,7 +57,6 @@ export const Container = styled.div`
   }}
 
   main {
-    width: 100%;
     height: 60%;
     background: ${props => props.theme.colors.backgroundSecondary};
 
@@ -118,7 +116,7 @@ export const Container = styled.div`
 
             margin: 0 0 0 20px;
 
-            z-index: 50;
+            z-index: 15;
 
             background: ${props => props.theme.colors.primary};
 
@@ -176,7 +174,6 @@ export const Container = styled.div`
 `
 
 export const ContentHeader = styled.header`
-  width: 100vw;
   height: 15%;
 
   display: flex;
@@ -239,13 +236,11 @@ export const ContentCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-height: 25%;
 
   opacity: 0;
 
-  width: 100vw;
-  height: 25%;
-
-  overflow-y: scroll;
+  overflow: auto;
 
   animation: ${fade} 2s cubic-bezier(1, 1, 0.75, 0.5) 2s forwards;
 
@@ -265,7 +260,6 @@ export const ContentCard = styled.div`
 
 export const InfoCard = styled.div`
   width: 80%;
-  height: auto;
 
   display: flex;
   justify-content: space-between;
@@ -345,10 +339,13 @@ export const Shadow = styled.div`
 
         display: flex;
 
-        /* background: rgba(34, 32, 40, 0.5); */
-        background: green;
+        background: rgba(34, 32, 40, 0.5);
 
-        z-index: 20;
+        z-index: 10;
+        top: 0;
+        left: 0;
+
+        border-radius: 0 70px 0 0;
 
         position: absolute;
       `

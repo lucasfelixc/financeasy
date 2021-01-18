@@ -2,15 +2,7 @@ import PropTypes from 'prop-types'
 import { useState } from 'react'
 import { Container } from '../../styles/pages/Components/boxAdd'
 
-export default function BoxAdd({
-  display,
-  spending,
-  height,
-  position,
-  left,
-  top,
-  values
-}) {
+export default function BoxAdd({ display, spending, height, values }) {
   const [textName, setTextName] = useState('')
   const [textDescription, setTextDescription] = useState('')
   const [textValue, setTextValue] = useState('')
@@ -39,13 +31,7 @@ export default function BoxAdd({
   }
 
   return (
-    <Container
-      display={display}
-      height={height}
-      position={position}
-      left={left}
-      top={top}
-    >
+    <Container display={display} height={height}>
       <div className="content name">
         <label htmlFor="name">Nome:</label>
         <input
@@ -90,8 +76,5 @@ BoxAdd.propTypes = {
   display: PropTypes.bool.isRequired,
   spending: PropTypes.bool.isRequired,
   height: PropTypes.string.isRequired,
-  position: PropTypes.string.isRequired,
-  left: PropTypes.string.isRequired,
-  top: PropTypes.string.isRequired,
   values: PropTypes.func.isRequired
 }

@@ -18,10 +18,12 @@ export const Container = styled.div`
   width: 200px;
   height: ${props => props.height};
 
+  position: absolute;
+
   animation-name: ${showBox};
   animation-duration: 0.3s;
 
-  z-index: 15;
+  z-index: 50;
 
   display: flex;
   flex-direction: column;
@@ -88,11 +90,7 @@ export const Container = styled.div`
 
   background: linear-gradient(180deg, #6247E6 0%, #4733A6 100%);
 
-  position: ${props => props.position};
-  left: ${props => props.left};
-  top: ${props => props.top};
-
-  border-radius: 40px 40px 40px 0;
+  border-radius: 40px;
 
   button {
     width: 80%;

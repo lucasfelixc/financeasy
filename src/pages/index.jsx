@@ -8,7 +8,7 @@ import Salary from '../assets/icons/salary.svg'
 import Historic from '../assets/icons/historic.svg'
 import Plus from '../assets/icons/plus.svg'
 
-import BoxAdd from '../pages/Components/BoxAdd'
+// import BoxAdd from '../pages/Components/BoxAdd'
 
 import {
   Container,
@@ -17,7 +17,7 @@ import {
   InfoCard,
   InfoPay,
   Shadow
-} from '../styles/pages/Home/styles'
+} from '../styles/pages/Home/stylesTest'
 
 import {
   users,
@@ -49,9 +49,9 @@ export default function Home() {
     setDisplay(false)
   }
 
-  function sendInfo(...adc) {
-    console.log(adc)
-  }
+  // function sendInfo(...adc) {
+  //   console.log(adc)
+  // }
 
   return (
     <Container display={display}>
@@ -98,15 +98,12 @@ export default function Home() {
               <button className="addPay" onClick={handleBoxClick}>
                 <Plus />
               </button>
-              <BoxAdd
+              {/* <BoxAdd
                 display={display}
-                position="absolute"
                 spending={false}
                 height="300px"
-                left="218px"
-                top="-207px"
                 values={sendInfo}
-              />
+              /> */}
               <Shadow display={display} onClick={handleShadowClick} />
             </div>
             <div className="rate" display={display}>
